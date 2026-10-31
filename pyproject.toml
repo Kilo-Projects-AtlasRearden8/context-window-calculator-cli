@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-calc"
+version = "1.0.0"
+description = "Local-first CLI that estimates prompt token usage and model context-window fit for local LLMs."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Asdale Dynamics, LLC"}]
+keywords = ["llm", "local-llm", "tokens", "context-window", "cli", "ai"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+context-calc = "context_calc.cli:main"
+
+[tool.setuptools]
+packages = ["context_calc", "tests"]
